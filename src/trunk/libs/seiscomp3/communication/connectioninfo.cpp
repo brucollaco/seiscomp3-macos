@@ -33,7 +33,7 @@
 #include <boost/bind.hpp>
 
 #include <seiscomp3/core/platform/platform.h>
-#ifdef MACOSX
+#ifdef __APPLE__
 #include <stdlib.h>
 #include <sys/types.h>
 #include <sys/sysctl.h>

@@ -6,8 +6,7 @@ SET(
 	chain_plugin
 )
 
-IF ( NOT MACOSX )
-	SET(
+SET(
 		_DIR_LIST 
 		${_DIR_LIST}
 		serial_plugin
@@ -25,8 +24,7 @@ IF ( NOT MACOSX )
 		fs_plugin
 		win_plugin
 		echopro_plugin
-	) 
-ENDIF ( NOT MACOSX )
+) 
 
 SET(SEEDLINK_PLUGIN_OUTPUT_DIR ${SC3_PACKAGE_SHARE_DIR}/plugins/seedlink)
 

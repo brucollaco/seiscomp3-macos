@@ -56,7 +56,7 @@ tel: +33(0)493752502  e-mail: anthony@alomax.net  web: http://www.alomax.net
 #ifdef CUSTOM_ETH
 #define PNAME  "NLLoc(ETH)"
 #else
-#define PNAME  "NLLoc"
+#define PNAME  "NLLoc"  
 #endif
 
 #include "GridLib.h"
@@ -70,6 +70,11 @@ tel: +33(0)493752502  e-mail: anthony@alomax.net  web: http://www.alomax.net
 
 #ifdef CUSTOM_ETH
 #include "custom_eth/eth_functions.h"
+#endif
+
+#ifdef __APPLE__
+#include "open_memstream-osx/open_memstream.h"
+#include "open_memstream-osx/fmemopen.h"
 #endif
 
 /** function to perform global search event locations */
@@ -220,7 +225,7 @@ int NLLoc
 
     char *bp_memory_stream = NULL;
     if (n_obs_lines > 0) {
-#ifdef _GNU_SOURCE
+#if defined(_GNU_SOURCE) || defined(__APPLE__)
         size_t memory_stream_size;
         FILE *fp_memory_stream = NULL;
         // read lines into memory memory stream

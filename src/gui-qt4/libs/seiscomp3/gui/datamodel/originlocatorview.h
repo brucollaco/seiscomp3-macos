@@ -113,7 +113,7 @@ class SC_GUI_API ArrivalDelegate : public QStyledItemDelegate {
 
 	public:
 		ArrivalDelegate(QWidget *parent);
-
+		
 	public:
 		void paint(QPainter * painter, const QStyleOptionViewItem & option,
 		           const QModelIndex & index) const;
