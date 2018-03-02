@@ -115,7 +115,6 @@
 /src/trunk/libs/3rd-party/spread/libspread/*.dylib
 /src/trunk/libs/3rd-party/spread/libspread/__.SYMDEF SORTED
 
-
 # /src/trunk/libs/3rd-party/spread/stdutil/
 /src/trunk/libs/3rd-party/spread/stdutil/config.log
 /src/trunk/libs/3rd-party/spread/stdutil/config.status
@@ -131,6 +130,9 @@
 
 # /src/trunk/libs/3rd-party/spread/libspread-util/lib/
 /src/trunk/libs/3rd-party/spread/libspread-util/lib/
+
+#/src/trunk/libs/3rd-party/spread/libspread-util/include/
+/src/trunk/libs/3rd-party/spread/libspread-util/include/spu_system.h
 
 # Enable only known src subdirectories
 /src/*/
