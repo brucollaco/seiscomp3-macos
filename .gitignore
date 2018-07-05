@@ -244,3 +244,4 @@
 /src/trunk/libs/3rd-party/spread/stdutil/src/stdutil.ltdo
 /src/trunk/libs/3rd-party/spread/stdutil/src/stdutil.o
 /src/trunk/libs/3rd-party/spread/stdutil/src/stdutil.tdo
+*.DS_Store
