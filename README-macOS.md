@@ -50,9 +50,20 @@ brew install openssl
 brew install md5sha1sum
 ```
 
+### Force install gettext
+brew install gettext
+brew link --force gettext
+
+### Force install flex
+brew install flex
+brew link --force flex
+
 ### Install qt4 with Homebrew
 
 `brew install qt@4`
+
+If this does not work then try with command:
+`brew install cartr/qt4/qt@4`
 
 Note: Qt 4.x is no longer officialy supported by Homebrew - by default Qt 5.x is installed.
 [See homebrew-qt4 page] (https://github.com/cartr/homebrew-qt4)
