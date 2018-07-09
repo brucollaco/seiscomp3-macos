@@ -14,9 +14,10 @@
 #  * added REQUIRED and QUIETLY check
 #  * search for mysql/mysql.h instead of just mysql.h 
 
-# Set Homebrew path for MYSQL
+# Set Homebrew path for MYSQL 5.7
 if(MACOSX)
-	SET(MYSQL_INCLUDE_DIR /usr/local/include/mysql/)
+	SET(MYSQL_INCLUDE_DIR /usr/local/opt/mysql@5.7/include/)
+	SET(MYSQL_LIBRARIES /usr/local/opt/mysql@5.7/lib/libmysqlclient.dylib)
 endif(MACOSX)
 	
 if(MYSQL_INCLUDE_DIR AND MYSQL_LIBRARIES)
