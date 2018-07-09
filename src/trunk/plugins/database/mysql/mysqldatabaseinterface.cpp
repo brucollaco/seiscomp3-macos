@@ -76,7 +76,7 @@ bool MySQLDatabase::open() {
 	if ( _handle == NULL )
 		return false;
 
-	bool reconnect = true;
+	my_bool reconnect = true;
 	mysql_options(_handle, MYSQL_OPT_RECONNECT, (const char*)&reconnect);
 
 	if ( _timeout > 0 ) {
