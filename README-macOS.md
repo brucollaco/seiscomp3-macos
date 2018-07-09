@@ -1,14 +1,21 @@
 # Seiscomp3 for macOS compilation notes
 
-Compilation done on Mac OS X 10.11+ & macOS Sierra 10.12.6 with Xcode 9.2 and gfortran 6.3
+This is a brief tutorial on how to compile Seiscomp3 on macOS. 
 
-If everything compiled fine, seiscomp3 will be installed in your Home Directory: ${HOME}/seiscomp3
+Compilation has been tested on:
+- Mac OS X 10.11+
+- macOS Sierra 10.12.6
+- macOS High Sierra 10.3
+- with Apple Xcode 9.x and
+- gfortran 6.3
+
+After compilation seiscomp3 will be installed in your Home Directory: ${HOME}/seiscomp3
 
 ## Pre-Requirements
 
-- Apple Xcode 8.x or later (clang command-line installation works or download Xcode from the App Store)
+- Apple Xcode 9.x or later (clang command-line installation works or download Xcode from the App Store)
 - GNU GFortran
-- homebrew package manager for macOS
+- Homebrew package manager for macOS
 
 ### Install Apple's Xcode 
 
@@ -40,14 +47,22 @@ or you could rename Macports default directory /opt/local to /opt/local.OFF
 
 ### Install seiscomp3 dependencies
 
-With Homebrew installed now, we just need to install seiscomp3 dependencies packages
+With Homebrew installed now, we just need to install seiscomp3 dependencies packages for macOS:
 ```
 brew install cmake
 brew install boost
-brew install mysql
+
 brew install flex
 brew install openssl
 brew install md5sha1sum
+```
+### Install MySQL 5.7 instead of current MySQL 8
+The latest Homebrew version installs MySQL8 by default, which seems to have some
+upgrade issues with the Seiscomp3 InnoDB.
+We just install MySQL 5.7 instead:
+
+```
+brew install mysql@5.7
 ```
 
 ### Force install gettext
